@@ -12,7 +12,7 @@ function Header({text ,bgColor,textColor}) {
 }
 
 Header.defaultProps = {
-text:'Fuck You',bgColor: 'rgba(0,0,0,0.4)', textColor:'#ff6a95'
+text:'Feedback',bgColor: 'rgba(0,0,0,0.4)', textColor:'#ff6a95'
 
 }
 Header.prototype = {
