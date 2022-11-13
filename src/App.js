@@ -39,7 +39,7 @@ const deleteFeedback = (id) => {
 <>
 <FeedbackForm handleAdd={addFeedback} />
     <FeedbackStats feedback={feedback}/> 
-<FeedbackList feedback={feedback}  
+<FeedbackList 
 handleDelete = {deleteFeedback}/>
 
 
