@@ -4,7 +4,7 @@ import { useContext } from 'react'
 import Feedbackitem from './Feedbackitem'
 import FeedbackContext from './context/FeedbackContext'
 
-function FeedbackList({handleDelete}) {
+function FeedbackList() {
 const {feedback} = useContext(FeedbackContext)
 
 
@@ -18,7 +18,7 @@ const {feedback} = useContext(FeedbackContext)
       {feedback.map((item) =>(
 <motion.div key={item.id}  initial={{opacity:0}} animate={{opacity:1}}  exit={{opacity:0}}     >
 
-<Feedbackitem key={item.id} item={item} handleDelete = {handleDelete}/>
+<Feedbackitem key={item.id} item={item}/>
 
 </motion.div>
 ))}
