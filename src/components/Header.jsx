@@ -1,12 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 function Header({text ,bgColor,textColor}) {
   const headerStyles = {backgroundColor:bgColor , color:textColor}
   
     return (
     <header style={headerStyles}>
-     <h2>{text}</h2> 
+     <Link to="/" style={{color:'#ff6a95',textDecorationLine:'none'}}><h2>{text}</h2> </Link>
     </header>
   )
 }
