@@ -1,6 +1,6 @@
 import{FaQuestion} from 'react-icons/fa'
 import React from 'react'
-import {Link, link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 function AboutIconLink() {
   return (
