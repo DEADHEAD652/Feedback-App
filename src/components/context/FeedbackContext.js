@@ -8,18 +8,44 @@ export const FeedbackProvider = ({children}) =>{
  const [feedback,setFeedback] = useState([{
 
 id:1,
-text:'this item is from context'
-,rating :10
+text:'this item is from context',
+rating :10
 
- }])
+ },
+ {
+
+    id:2,
+    text:'this item is from context',
+    rating :1
+    
+     },{
+
+        id:3,
+        text:'this item is from context',
+        rating :10
+        
+         }
+ 
 
 
+
+
+])
+
+const [feedbackEdit , setFeedbackEdit] = useState({
+item:{},
+edit:false
+
+
+})
+
+//adding 
  const addFeedback = (newFeedback) =>{
     newFeedback.id = uuidv4()
      setFeedback([newFeedback ,...feedback])
 
 }
-
+//delete feedback
  const deleteFeedback = (id) => {
     if(window.confirm('Are you sure you want to delete ?')){
         setFeedback(feedback.filter((item) => 
@@ -28,6 +54,14 @@ text:'this item is from context'
     }
     
 }
+//set item to update
+const EditFeedback = (item) =>{
+
+setFeedbackEdit({
+   item,edit:true
+})
+
+}
 
 
 
@@ -35,7 +69,7 @@ text:'this item is from context'
 return <FeedbackContext.Provider value={{
 feedback,
 deleteFeedback,
-addFeedback
+addFeedback,EditFeedback,feedbackEdit
 
 
 }}>
