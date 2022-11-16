@@ -1,21 +1,16 @@
-import React from 'react'
-import PropTypes  from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 
-function Card({children ,reverse}) {
-  return (
-    <div className={`card ${reverse && 'reverse'}`}>
-     {children}
-    </div>
-    
-  )
+function Card({ children, reverse }) {
+  return <div className={`card ${reverse && "reverse"}`}>{children}</div>;
 }
 
-Card.defaultProps ={
-    reverse : false
-}
+Card.defaultProps = {
+  reverse: false,
+};
 
-Card.propTypes={
-children : PropTypes.node.isRequired,
-reserve: PropTypes.bool
-}
-export default Card
+Card.propTypes = {
+  children: PropTypes.node.isRequired,
+  reserve: PropTypes.bool,
+};
+export default Card;
